@@ -1,13 +1,11 @@
 version: 2
 sources:
   - name: source_dbt
-    database: |   
+    database: |
       {%- if target.name.lower() == "dev" -%} DB_DBT_SGAIDE_DEV 
       {%- elif target.name.lower() == "prod" -%} DB_DBT_SGAIDE_PROD
       {%- else -%} DB_DBT_SGAIDE_DEV
       {%- endif -%}
-
-
     schema: source
     tables:
       - name: restaurants
