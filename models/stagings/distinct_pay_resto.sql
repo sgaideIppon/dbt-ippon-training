@@ -1,7 +1,6 @@
 {#{% set payment_methods = get_pay_method() %} #}
 
-{% set payment_methods = dbt_utils.get_column_values %}
-
+{% set payment_methods = dbt_utils.get_column_values(table=ref("base_orders"), column="payment_method") %}
 
 select
 ord.restaurant_identifier, rest.name, rest.address, 

@@ -1,4 +1,4 @@
-select rest.adress,ord.restaurant_identifier, sum(ord.amount) as amount,rest.name
+select rest.address,ord.restaurant_identifier, sum(ord.amount) as amount,rest.name
 
 from {{ ref("base_orders") }} as ord
 
