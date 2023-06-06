@@ -1,3 +1,3 @@
 select
 distinct *
-from {{ mockable_source('source_dbt','orders','sample_orders') }}
+from {{ mockable_source('source','orders','sample_orders') }}
