@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: model_name
+  - name: restaurants__turnover_ordered
     tests:
       - dbt_utils.equality:
           compare_model: ref('expect_resto_ruenover_order')
