@@ -1,0 +1,23 @@
+version: 2
+sources:
+  - name: source_dbt
+    database: DB_DBT_SGAIDE_DEV
+    schema: source
+    tables:
+      - name: restaurants
+        description: Table contenant des infos sur les différents restaurants
+        columns:
+          - name: IDENTIFIER
+            tests:
+            - unique
+            - not_null
+              
+
+      - name: orders
+        description: Table contenant des infos sur les différentes commandes
+        columns:
+          - name: RESTAURANT_IDENTIFIER
+            tests:
+            - not_null
+
+      
